@@ -1,6 +1,8 @@
 public class HotelRoom{
 private int roomNumber;
 private boolean isBooked;
+
+//get guest name from Guest class?
 private String Guest;
 private String roomType;
 
