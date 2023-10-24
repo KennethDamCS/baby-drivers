@@ -1,4 +1,4 @@
-public class Manager{
+public class Manager extends Employee{
     private String firstName;
     private String lastName;
 
@@ -8,4 +8,10 @@ public class Manager{
     }
 
 
+
+
+
+    public void changeRoomInfo(HotelRoom room, String newInfo){
+        room.changeRoomInfo(newInfo);
+    }
 }

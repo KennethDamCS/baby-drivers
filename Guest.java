@@ -14,7 +14,10 @@ public String getFirstName(){
     return firstName;
 }
 
+public void makeReservation(Date){
+    
 
+}
 
 
 }
