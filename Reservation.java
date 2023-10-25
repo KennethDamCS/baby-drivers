@@ -1,3 +1,5 @@
+import java.util.Date;
+
 public class Reservation{
 
     private Date startDate;
@@ -13,9 +15,21 @@ public class Reservation{
         this.roomNumber = roomNumber;
     }
 
+    public String reserve_Room(Date start_Date, Date end_Date, int room_Number, Guest guest){
+        if (HotelRoom.roomNumber == room_Number && !(HotelRoom.isBooked) && HotelRoom.isCleaned) {
+            HotelRoom.isBooked = true;
+            HotelRoom.Guest = guest;
+        }
+        else if (HotelRoom.isBooked) {
+            return "Hotel room is already booked\nGuest info: " + HotelRoom.Guest;
+        } else {
+            return "Error during reservation creation"; 
+        }
+    }
 
-
-
+    public String cancel_Reservation(HotelRoom room, Guest guest) {
+        if (HotelRoom.room)
+    }
 
 
     
