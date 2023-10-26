@@ -25,18 +25,17 @@ private void toggleCleaned(){
     }
 }
 
-public int getRoomNumber{
+public int getRoomNumber(){
     return roomNumber;
 }
 
-public int getGuest{
+public String getGuest(){
     return Guest;
 }
 
-public int getRoomType{
+public String getRoomType(){
     return roomType;
 }
-
 
 public void toggleBooked(){
     if(isBooked = false){
