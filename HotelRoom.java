@@ -50,9 +50,5 @@ public void changeRoominfo(String newInfo){
     roomInfo = newInfo;
 }
 
-public static void reserve(Reservation newReservation) {
-}
-
-
 
 }
