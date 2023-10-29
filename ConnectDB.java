@@ -51,12 +51,12 @@ public class ConnectDB{
             // }
 
             //DELETE DATA FROM DB
-            String sql = "DELETE FROM rooms WHERE room_name='101'";
-            Statement statement = connection.createStatement();
-            int rows = statement.executeUpdate(sql);
-            if(rows > 0){
-                System.out.println("Room has been deleted");
-            }
+            // String sql = "DELETE FROM rooms WHERE room_name='101'";
+            // Statement statement = connection.createStatement();
+            // int rows = statement.executeUpdate(sql);
+            // if(rows > 0){
+            //     System.out.println("Room has been deleted");
+            // }
 
 
 
