@@ -2,11 +2,16 @@ public class Guest{
 
 private String firstName;
 private String lastName;
+private String phoneNumber;
+private String email;
 
 
-public Guest(fName, lName){
+
+public Guest(String firstName, String lastName, String phoneNumber, String email){
     this.firstName = fName;
     this.lastName = lName;
+    this.phoneNumber = phoneNumber;
+    this.email = email;
 }
 
 
@@ -14,6 +19,11 @@ public String getFirstName(){
     return firstName;
 }
 
+public Reservation viewReservation(){
+
+}
+
+/* 
 //makes a reservation
 //for date it uses the Java.time package
 // changes can be made depending on future code changes
@@ -27,7 +37,7 @@ public Reservation makeReservation(LocalDatetime startDate, LocalDatetime endDat
 public void cancelReservation(Reservation reservation){
     reservation.room.unreserve();
 }
-
+*/
 public void sendEmail(String email){
 // to be added
 }
