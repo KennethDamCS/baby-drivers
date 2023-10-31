@@ -1,6 +1,5 @@
 import java.sql.*;
 
-
 public class ConnectDB{
     public static void main(String[] args) throws SQLException{
         String jdbcURL = "jdbc:postgresql://localhost:5432/postgres";
