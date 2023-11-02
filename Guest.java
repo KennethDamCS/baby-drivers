@@ -6,18 +6,12 @@ private String phoneNumber;
 private String email;
 
 
-<<<<<<< HEAD
 
 public Guest(String firstName, String lastName, String phoneNumber, String email){
-    this.firstName = fName;
-    this.lastName = lName;
+    this.firstName = firstName;
+    this.lastName = lastName;
     this.phoneNumber = phoneNumber;
     this.email = email;
-=======
-public Guest(String fName, String lName){
-    firstName = fName;
-    lastName = lName;
->>>>>>> 8081ed5efac2b9bf7a3f6605d2771eeed0f41ed1
 }
 
 
@@ -25,10 +19,7 @@ public String getFirstName(){
     return firstName;
 }
 
-<<<<<<< HEAD
-public Reservation viewReservation(){
 
-}
 
 /* 
 //makes a reservation
@@ -48,8 +39,6 @@ public void cancelReservation(Reservation reservation){
 public void sendEmail(String email){
 // to be added
 }
-=======
->>>>>>> 8081ed5efac2b9bf7a3f6605d2771eeed0f41ed1
 
 
 }
