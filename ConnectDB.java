@@ -2,7 +2,7 @@ import java.sql.*;
 
 public class ConnectDB{
     public static void main(String[] args) throws SQLException{
-        String jdbcURL = "jdbc:postgresql://localhost:5432/postgres";
+        String jdbcURL = "jdbc:postgresql://34.28.31.108:5432/postgres";
         String username = "postgres";
         String password = "postgres";
 
@@ -59,12 +59,12 @@ public class ConnectDB{
 
 
 
-            // if(connection != null){
-            //     System.out.println("Connection OK");       
-            // }
-            // else{
-            //     System.out.println("Connection failed");
-            // }
+            if(connection != null){
+                System.out.println("Connection OK");       
+            }
+            else{
+                System.out.println("Connection failed");
+            }
 
             connection.close();
         } catch (Exception e){
