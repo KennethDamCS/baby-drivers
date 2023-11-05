@@ -4,7 +4,7 @@ public class ConnectDB{
     public static void main(String[] args) throws SQLException{
         String jdbcURL = "jdbc:postgresql://34.28.31.108:5432/postgres";
         String username = "postgres";
-        String password = "postgres";
+        String password = "COMP-380-Hotel-App";
 
         try{
             //Class.forName("org.postgresql.Driver");
