@@ -4,6 +4,7 @@ import java.sql.*;
 class HotelReservationSystem{
     private Connection connection;
 
+    //Establishes connectiong from app to the database
     public void ConnectDB(){
         try{
             String jdbcURL = "jdbc:postgresql://34.28.31.108:5432/postgres";
@@ -22,6 +23,7 @@ class HotelReservationSystem{
         }
     }
 
+    //Closes connection to the database to free up resources
     public void closeConnectDB(){
         try{
             if(connection != null){
@@ -31,10 +33,6 @@ class HotelReservationSystem{
             e.printStackTrace();
         }
     }
+
     
-    public static void main(String[] args) throws SQLException{
-        HotelReservationSystem hotel = new HotelReservationSystem();
-        hotel.ConnectDB();
-        hotel.closeConnectDB();
-    }
 }
