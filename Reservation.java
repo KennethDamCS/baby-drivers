@@ -1,3 +1,5 @@
+import java.sql.*;
+
 public class Reservation{
 
     private Timestamp startDate;
