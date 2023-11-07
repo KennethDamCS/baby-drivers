@@ -1,14 +1,14 @@
-import java.util.Date;
+import java.sql.*;
 
 public class Reservation{
 
-    private Date startDate;
-    private Date endDate;
+    private Timestamp startDate;
+    private Timestamp endDate;
     private Guest guest;
     private int roomNumber;
 
 
-    public Reservation(Date startDate, Date endDate, Guest guest, int roomNumber){
+    public Reservation(Timestamp startDate, Timestamp endDate, Guest guest, int roomNumber){
         this.startDate = startDate;
         this.endDate = endDate;
         this.guest = guest;
@@ -26,18 +26,5 @@ public class Reservation{
             return "Error during reservation creation"; 
         }
     }
-
-    public String cancel_Reservation(HotelRoom room, Guest guest) {
-        if (HotelRoom.room)
-    }
-
-
-    
-    public String toString(){
-
-    }
-
-
-
     
 }
