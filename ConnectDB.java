@@ -10,6 +10,7 @@
 //             //Class.forName("org.postgresql.Driver");
 //             Connection connection = DriverManager.getConnection(jdbcURL, username, password);
 
+
 //             //CREATE DATA IN DB
 //             // String sql = "INSERT INTO rooms (room_id, room_name, room_type, vacancy)"
 //             //             +"VALUES ('1', '101', 'single_bed', 'false')";
