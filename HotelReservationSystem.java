@@ -2,7 +2,12 @@ import java.util.*;
 import java.sql.*;
 
 class HotelReservationSystem{
-    private Connection connection;
+    private static Connection connection;
+
+    //Getter
+    public static Connection getConnection(){
+        return connection;
+    }
 
     //Establishes connectiong from app to the database
     public void ConnectDB(){
