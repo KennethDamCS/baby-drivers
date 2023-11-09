@@ -4,9 +4,11 @@ body {
     border: 0px;
     padding: 0px;
     margin: 0px;
+    width: 100vw;
+    height: 100vh;
 }
 
-#nav_styling{
+#nav-styling{
     background-color: midnightblue;
     color: white;
     position: sticky;
@@ -16,7 +18,7 @@ body {
     justify-content: left;
 }
 
-.horizontal_list {
+.horizontal-list {
     justify-content: right;
     flex-direction: row;
     display: flex;
@@ -32,7 +34,7 @@ body {
     height: 50px;
 }
 
-.styling_one{
+.styling-one{
     background-color: tomato;
     color: rgb(40, 124, 220);
     border: 2px solid black;
@@ -41,7 +43,25 @@ body {
     height: 2000px;
 }
 
-.sticky {
-    position: sticky;
-    top: 0px;
+
+.form-container{
+    display: flex;
+    width: 80%;
+    height: 80%;
+    justify-content: center;
+    margin: 20px;
+}
+
+.reservation-form{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.form-part{
+    flex-direction: column;
+}
+
+.fa-hotel{
+    font-size: 20px;
 }
