@@ -5,10 +5,11 @@ public class Room{
     private String roomType;
     private double price;
 
-    public Room(int roomId, String roomType, double price){
+    public Room(int roomId, String roomType, double price) throws SQLException{
         this.roomId = roomId;
         this.roomType = roomType;
         this.price = price;
+        toDB();
     }
 
     //Setters and Getters
@@ -39,6 +40,7 @@ public class Room{
         ps.setInt(1, this.roomId);
         ps.setString(2, this.roomType);
         ps.setDouble(3, this.price);
+        ps.executeUpdate();
     }
 }
 
