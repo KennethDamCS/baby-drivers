@@ -1,48 +1,88 @@
+import java.math.BigDecimal;
 import java.sql.*;
 
 public class Room{
     private int roomId;
+    private String roomNumber;
     private String roomType;
-    private double price;
+    private BigDecimal roomPrice;
+    private String roomStatus;
 
-    public Room(int roomId, String roomType, double price) throws SQLException{
-        this.roomId = roomId;
+    public Room(String roomNumber, String roomType, BigDecimal roomPrice, String roomStatus) throws SQLException{
+        this.roomNumber = roomNumber;
         this.roomType = roomType;
-        this.price = price;
+        this.roomPrice = roomPrice;
+        this.roomStatus = roomStatus;
         toDB();
     }
 
-    //Setters and Getters
     public void setRoomId(int roomId){
         this.roomId = roomId;
     }
-    public int getRoomId(){
-        return roomId;
-    }
-
-    public void setRoomType(String roomType){
-        this.roomType = roomType;
-    }
-    public String getRoomType(){
-        return roomType;
-    }
-
-    public void setPrice(double price){
-        this.price = price;
-        
-    }
-    public double getPrice(){
-        return price;
-    }
 
     public void toDB() throws SQLException{
-        PreparedStatement ps = HotelReservationSystem.getConnection().prepareStatement("INSERT INTO rooms (room_id, room_type, price) VALUES (?, ?, ?)");
-        ps.setInt(1, this.roomId);
+        PreparedStatement ps = HotelReservationSystem.getConnection().prepareStatement("INSERT INTO rooms_test (room_number, room_type, room_price, room_status) VALUES (?, ?, ?, ?) RETURNING room_id");
+        ps.setString(1, this.roomNumber);
         ps.setString(2, this.roomType);
-        ps.setDouble(3, this.price);
-        ps.executeUpdate();
+        ps.setBigDecimal(3, this.roomPrice);
+        ps.setString(4, this.roomStatus);
+        ResultSet rs = ps.executeQuery();
+        if(rs.next()){
+            this.setRoomId(rs.getInt("room_id"));
+        }
+
     }
 }
+
+
+// public class Room{
+//     private int roomId;
+//     private String roomType;
+//     private double price;
+//     private String status;
+
+//     //Constructor that will save Room data to database
+//     public Room(int roomId, String roomType, double price, String status) throws SQLException{
+//         this.roomId = roomId;
+//         this.roomType = roomType;
+//         this.price = price;
+//         this.status = status;
+//         toDB();
+//     }
+
+//     //Setters and Getters
+//     public void setRoomId(int roomId){
+//         this.roomId = roomId;
+//     }
+//     public int getRoomId(){
+//         return roomId;
+//     }
+
+//     public void setRoomType(String roomType){
+//         this.roomType = roomType;
+//     }
+//     public String getRoomType(){
+//         return roomType;
+//     }
+
+//     public void setPrice(double price){
+//         this.price = price;
+        
+//     }
+//     public double getPrice(){
+//         return price;
+//     }
+
+//     //Method that will insert current attributes to database
+//     public void toDB() throws SQLException{
+//         PreparedStatement ps = HotelReservationSystem.getConnection().prepareStatement("INSERT INTO rooms (room_id, room_type, room_price, room_status) VALUES (?, ?, ?, ?)");
+//         ps.setInt(1, this.roomId);
+//         ps.setString(2, this.roomType);
+//         ps.setDouble(3, this.price);
+//         ps.setString(4, this.status);
+//         ps.executeUpdate();
+//     }
+// }
 
 // private int roomNumber;
 // private boolean isBooked;
