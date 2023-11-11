@@ -12,8 +12,9 @@ public class Main {
 
         //Room room = new Room("203", "Single", new BigDecimal(200), "Available");
         
+        Room room = new Room();
 
-
+        room.printRooms();
 
         hotel.closeConnectDB();
 
