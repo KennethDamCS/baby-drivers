@@ -1,0 +1,67 @@
+body {
+    display: flex;
+    flex-direction: column;
+    border: 0px;
+    padding: 0px;
+    margin: 0px;
+    width: 100vw;
+    height: 100vh;
+}
+
+#nav-styling{
+    background-color: midnightblue;
+    color: white;
+    position: sticky;
+    top: 0px;
+    flex-direction: row;
+    display: flex;
+    justify-content: left;
+}
+
+.horizontal-list {
+    justify-content: right;
+    flex-direction: row;
+    display: flex;
+    list-style-type: none;
+    gap: 25px;
+    text-align: center;
+}
+
+.reservationForm {
+    flex-direction: row;
+    border: 20px;
+    background-color: burlywood;
+    height: 50px;
+}
+
+.styling-one{
+    background-color: tomato;
+    color: rgb(40, 124, 220);
+    border: 2px solid black;
+    margin: 20px;
+    padding: 20px;
+    height: 2000px;
+}
+
+
+.form-container{
+    display: flex;
+    width: 80%;
+    height: 80%;
+    justify-content: center;
+    margin: 20px;
+}
+
+.reservation-form{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.form-part{
+    flex-direction: column;
+}
+
+.fa-hotel{
+    font-size: 20px;
+}
