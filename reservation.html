@@ -2,7 +2,11 @@
 
 <html>
   <head>
-    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="reservation.css" />
+    <script
+      src="https://kit.fontawesome.com/62fde95db0.js"
+      crossorigin="anonymous"
+    ></script>
     <script
       src="https://unpkg.com/react@18/umd/react.development.js"
       crossorigin
@@ -12,19 +16,26 @@
       crossorigin
     ></script>
     <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Noto+Sans&family=Roboto+Condensed&family=Roboto:wght@100&family=Ubuntu&display=swap"
+      rel="stylesheet"
+    />
   </head>
   <body>
     <header id="nav-styling">
-      <nav>
-        <div>
-          <h1>Test title</h1>
-          <ul class="horizontal-list">
-            <li>Home</li>
-            <li><a href="reservation.html">Reservation</a></li>
-            <li>Help</li>
-            <li>Terms and Conditions</li>
-          </ul>
-        </div>
+      <nav id="nav-bar">
+        <div id="nav-left">
+        <h1>Hotel California</h1>
+        <i class="fa-solid fa-hotel" style="color: #3770d2;"></i>
+      </div>
+        <ul class="horizontal-list">
+          <li>Home</li>
+          <li><a href="reservation.html">Reservation</a></li>
+          <li>Help</li>
+          <li>Terms and Conditions</li>
+        </ul>
       </nav>
     </header>
     <div class="form-container">
@@ -64,8 +75,14 @@
             min="2023-12-01"
             max="2040-12-31"
           />
+          <button type="submit" id="submit">Create Reservation</button>
         </div>
       </form>
     </div>
+    <footer>
+      <div>
+        <p>© 2023 – 2023 baby-Drivers International, Inc. All rights reserved. Baby Drivers Proprietary Information</p>
+      </div>
+    </footer>
   </body>
 </html>
