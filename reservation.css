@@ -1,4 +1,5 @@
 body {
+    background-image: url("Photospexels-alexander-igrevsky-1862695.jpg");
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -40,14 +41,7 @@ body {
     height: 50px;
 }
 
-.styling-one{
-    background-color: tomato;
-    color: rgb(40, 124, 220);
-    border: 2px solid black;
-    margin: 20px;
-    padding: 20px;
-    height: 2000px;
-}
+
 
 
 .form-container{
@@ -79,7 +73,6 @@ body {
 }
 
 .form-container{
-    border: solid black 2px;
     margin: 5px;
     display: flex;
     justify-content: center;
@@ -97,6 +90,7 @@ footer{
 }
 
 #nav-bar{
+    
     display: flex;
     flex-direction: row;
     justify-content: space-between;
@@ -116,4 +110,14 @@ footer{
     width: 100vw;
     height: 10%;
     background-color: rgb(110, 188, 212);
+}
+
+a{
+    text-decoration: none;
+    color: white;
+}
+
+a:hover{
+    font-size: 20px;
+    color: black;
 }
