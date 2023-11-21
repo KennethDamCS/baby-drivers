@@ -1,17 +1,21 @@
-public class Manager extends Employee{
-    String managerOverride = null;
+public class Manager{
+    //
+    private String employeeId;
+    private String FirstName;
+    private String LastName;
 
-    //Constructor w/ managerOverride
-    public Manager(String employeeId, String FirstName, String LastName, String managerOverride){
-        super(employeeId, FirstName, LastName);
-        this.managerOverride = managerOverride;
-    }
-    
-    private void setManagerOverride(String m){
-        managerOverride = m;
+    public Manager(String employeeId, String FirstName, String LastName ) {
+        this.employeeId = employeeId;
+        this.FirstName = FirstName;
+        this.LastName = LastName;
     }
 
-    private String getManagerOverride(){
-        return managerOverride;
+    public String getEmployeeId() {
+        return employeeId;
+    }
+
+    public String getName(String FirstName, String LastName) {
+        String Name = LastName + FirstName;
+        return Name;
     }
 }

@@ -12,13 +12,18 @@ public class Main {
 
         //Room room = new Room("203", "Single", new BigDecimal(200), "Available");
         
-        Room room = new Room();
+        // Room room = new Room();
 
-        room.printRooms();
+        // room.printRooms();
 
-        hotel.closeConnectDB();
-
-        
+        // hotel.closeConnectDB();
+        Guest guest = new Guest("Daniel" , "Bautista" , "818 747 3255", "db@gmail.com", 4);
+            System.out.println("Guest FirstName: " + guest.getFirstName());
+            System.out.println("Guest LastName: " + guest.getLastName());
+            System.out.println("Guest PhoneNumber: " + guest.getphoneNumber());
+            System.out.println("Guest Email: " + guest.getemail());
+            System.out.println("Guest Party Size: " + guest.getpartySize());
+        guest.toDB();
     }
 }
  
